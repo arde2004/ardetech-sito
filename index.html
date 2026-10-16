@@ -371,28 +371,122 @@ footer p { margin:5px 0; font-size:13px; }
 </section>
 
 <section id="contatti">
-  <div class="label">Iniziamo da una conversazione</div>
+  <div class="label">Parliamo del tuo progetto</div>
   <h2>Che cosa vuoi realizzare?</h2>
+
   <div class="contact">
     <p class="lead">
-      Raccontami la tua attività, cosa ti serve e quando vorresti partire.
-      Se hai già un sito, aggiungi il link.
+      Raccontami cosa ti serve. Ti ricontatterò per approfondire
+      la richiesta e preparare un preventivo.
     </p>
-    <div class="actions">
-      <a class="btn"
-         href="mailto:arde.maap@gmail.com?subject=Richiesta%20preventivo%20ArdeTech&amp;body=Ciao%2C%0A%0ALa%20mia%20attivit%C3%A0%3A%20%0AMi%20serve%3A%20%0ASito%20attuale%20%28se%20presente%29%3A%20%0ATempi%20desiderati%3A%20%0ABudget%20indicativo%20%28facoltativo%29%3A%20%0A%0AGrazie">
-        Richiedi un preventivo via email →
-      </a>
-      <a class="btn secondary" href="tel:+393715638293">Chiama</a>
-    </div>
-    <p>
-      Email: <a href="mailto:arde.maap@gmail.com">arde.maap@gmail.com</a><br>
-      Telefono: <a href="tel:+393715638293">+39 371 563 8293</a>
-    </p>
+
+    <form
+      name="preventivo"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+    >
+      <input type="hidden" name="form-name" value="preventivo">
+
+      <p hidden>
+        <label>
+          Lascia vuoto questo campo:
+          <input name="bot-field">
+        </label>
+      </p>
+
+      <p>
+        <label for="nome" style="display:block;margin-bottom:8px">
+          Nome *
+        </label>
+        <input
+          id="nome"
+          name="nome"
+          type="text"
+          autocomplete="name"
+          maxlength="100"
+          required
+          style="width:100%;padding:14px;border:1px solid #728099;
+          border-radius:8px;background:#0b1120;color:#edf3ff;
+          font:inherit"
+        >
+      </p>
+
+      <p>
+        <label for="email" style="display:block;margin-bottom:8px">
+          Email alla quale ricontattarti *
+        </label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          autocomplete="email"
+          maxlength="254"
+          required
+          style="width:100%;padding:14px;border:1px solid #728099;
+          border-radius:8px;background:#0b1120;color:#edf3ff;
+          font:inherit"
+        >
+      </p>
+
+      <p>
+        <label for="servizio" style="display:block;margin-bottom:8px">
+          Che cosa ti interessa? *
+        </label>
+        <select
+          id="servizio"
+          name="servizio"
+          required
+          style="width:100%;padding:14px;border:1px solid #728099;
+          border-radius:8px;background:#0b1120;color:#edf3ff;
+          font:inherit"
+        >
+          <option value="">Seleziona un servizio</option>
+          <option>Sito essenziale</option>
+          <option>Sito completo</option>
+          <option>Gestionale personalizzato</option>
+          <option>Manutenzione e assistenza</option>
+          <option>Altro / vorrei un consiglio</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="messaggio" style="display:block;margin-bottom:8px">
+          Descrivi il tuo progetto *
+        </label>
+        <textarea
+          id="messaggio"
+          name="messaggio"
+          rows="6"
+          maxlength="5000"
+          required
+          placeholder="Di cosa si occupa la tua attività? Che cosa vorresti realizzare?"
+          style="width:100%;padding:14px;border:1px solid #728099;
+          border-radius:8px;background:#0b1120;color:#edf3ff;
+          font:inherit;resize:vertical"
+        ></textarea>
+      </p>
+
+      <p class="note">
+        I campi con * sono obbligatori.
+        Non inserire password o informazioni riservate.
+      </p>
+
+      <button
+        class="btn"
+        type="submit"
+        style="font:inherit;font-weight:700;cursor:pointer"
+      >
+        Invia richiesta di preventivo →
+      </button>
+    </form>
+
     <p class="note">
-      Il pulsante email apre il programma di posta del tuo dispositivo:
-      il messaggio verrà inviato soltanto quando lo confermerai.
-      Puoi anche copiare l’indirizzo e scrivermi dalla tua posta.
+      Preferisci contattarmi direttamente?<br>
+      Email:
+      <a href="mailto:arde.maap@gmail.com">arde.maap@gmail.com</a><br>
+      Telefono:
+      <a href="tel:+393715638293">+39 371 563 8293</a>
     </p>
   </div>
 </section>
