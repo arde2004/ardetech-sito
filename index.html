@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ArdeTech: siti web e gestionali personalizzati per attività e professionisti nel Lodigiano e da remoto. Richiedi un preventivo.">
+<title>ArdeTech — Siti web e gestionali su misura</title>
+<style>
+:root {
+  --bg:#0b1120; --panel:#121d30; --text:#edf3ff;
+  --muted:#adbad1; --accent:#93f1c5; --line:#2b3950;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  margin:0; background:var(--bg); color:var(--text);
+  font-family:Arial,sans-serif; line-height:1.65;
+}
+a { color:inherit; }
+a:focus-visible, summary:focus-visible {
+  outline:3px solid var(--accent); outline-offset:5px;
+}
+.wrap { width:min(1120px,90%); margin:auto; }
+header {
+  display:flex; justify-content:space-between; align-items:center;
+  gap:20px; padding:24px 0; border-bottom:1px solid var(--line);
+}
+.logo { font-size:26px; font-weight:800; text-decoration:none; }
+.logo span { color:var(--accent); }
+nav { display:flex; flex-wrap:wrap; gap:23px; }
+nav a { text-decoration:none; font-size:14px; color:var(--muted); }
+nav a:hover { color:var(--accent); }
+.hero {
+  display:grid; grid-template-columns:1.2fr 1fr;
+  gap:60px; align-items:center; padding:90px 0;
+}
+.label {
+  color:var(--accent); font-size:12px; letter-spacing:2px;
+  text-transform:uppercase;
+}
+h1,h2,h3 { line-height:1.12; letter-spacing:-1px; }
+h1 { font-size:clamp(43px,6vw,72px); margin:22px 0; }
+h1 span { color:var(--accent); }
+h2 { font-size:clamp(30px,4vw,44px); margin:15px 0 22px; }
+h3 { font-size:23px; margin:15px 0; }
+p { color:var(--muted); }
+.lead { font-size:18px; max-width:600px; }
+.actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
+.btn {
+  display:inline-flex; justify-content:center; align-items:center;
+  padding:13px 21px; border-radius:8px; background:var(--accent);
+  color:#102218; font-weight:700; text-decoration:none;
+  border:1px solid transparent;
+}
+.btn.secondary { background:transparent; color:var(--text); border-color:var(--line); }
+.note { font-size:13px; }
+.preview {
+  background:linear-gradient(145deg,#1d324a,#132333);
+  border:1px solid #3a536c; border-radius:18px; padding:25px;
+  box-shadow:0 25px 70px #0003;
+}
+.preview-top { display:flex; gap:7px; margin-bottom:25px; }
+.dot { width:9px; height:9px; background:#678098; border-radius:50%; }
+.preview-title { font-size:19px; font-weight:700; }
+.tag {
+  display:inline-block; color:var(--accent); background:#93f1c512;
+  padding:5px 10px; font-size:12px; border-radius:5px;
+}
+.mock-row {
+  display:flex; justify-content:space-between; gap:15px;
+  border-bottom:1px solid #ffffff18; padding:16px 0; font-size:14px;
+}
+.mock-row span:last-child { color:var(--accent); }
+section { padding:65px 0; border-top:1px solid var(--line); scroll-margin-top:20px; }
+.section-intro { max-width:660px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; margin-top:30px; }
+.card {
+  padding:28px; border:1px solid var(--line);
+  border-radius:14px; background:var(--panel);
+}
+.card ul { padding-left:20px; color:var(--muted); }
+.card li { margin:10px 0; }
+.price { font-size:38px; font-weight:800; margin:20px 0 0; }
+.price small { font-size:15px; color:var(--muted); font-weight:400; }
+.highlight { border-color:var(--accent); }
+.card .btn { margin-top:18px; }
+.two { grid-template-columns:repeat(2,1fr); }
+.step { color:var(--accent); font-size:13px; }
+details { padding:20px 0; border-bottom:1px solid var(--line); }
+summary { cursor:pointer; font-weight:700; }
+details p { max-width:800px; }
+.contact {
+  background:linear-gradient(120deg,#1b3540,#152338);
+  border:1px solid #375461; border-radius:16px;
+  padding:40px; margin-top:25px;
+}
+.contact a:not(.btn) { overflow-wrap:anywhere; }
+footer { padding:30px 0; border-top:1px solid var(--line); }
+footer p { margin:5px 0; font-size:13px; }
+@media(max-width:760px) {
+  header { flex-direction:column; align-items:flex-start; }
+  nav { gap:18px; }
+  .hero { grid-template-columns:1fr; padding:50px 0; gap:35px; }
+  .grid,.two { grid-template-columns:1fr; }
+  section { padding:45px 0; }
+  .contact { padding:25px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="logo" href="#inizio" aria-label="ArdeTech, inizio pagina">Arde<span>Tech.</span></a>
+  <nav aria-label="Navigazione principale">
+    <a href="#servizi">Servizi</a>
+    <a href="#prezzi">Prezzi</a>
+    <a href="#assistenza">Assistenza</a>
+    <a href="#contatti">Contatti</a>
+  </nav>
+</header>
+
+<main>
+<div class="hero" id="inizio">
+  <div>
+    <div class="label">Siti web · Software su misura</div>
+    <h1>La tua attività,<br>con una marcia<br><span>digitale in più.</span></h1>
+    <p class="lead">
+      Siti chiari per presentarti online e gestionali personalizzati
+      per organizzare il lavoro. Partiamo da ciò che serve alla tua attività.
+    </p>
+    <div class="actions">
+      <a class="btn" href="#contatti">Parliamo del tuo progetto →</a>
+      <a class="btn secondary" href="#prezzi">Scopri i prezzi</a>
+    </div>
+    <p class="note">Nel Lodigiano e da remoto · Preventivo prima di iniziare</p>
+  </div>
+
+  <div class="preview">
+    <div class="preview-top" aria-hidden="true">
+      <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    </div>
+    <span class="tag">Esempio illustrativo</span>
+    <p class="preview-title">Il lavoro, più organizzato.</p>
+    <p>Uno spazio su misura per le informazioni che usi ogni giorno.</p>
+    <div class="mock-row"><span>Clienti e contatti</span><span>In un unico posto</span></div>
+    <div class="mock-row"><span>Richieste e preventivi</span><span>Facili da ritrovare</span></div>
+    <div class="mock-row"><span>Appuntamenti</span><span>Sotto controllo</span></div>
+    <p class="note">Le funzioni del tuo gestionale si definiscono insieme.</p>
+  </div>
+</div>
+
+<section id="servizi">
+  <div class="label">Cosa posso realizzare</div>
+  <h2>Strumenti utili. Senza complicazioni.</h2>
+  <p class="section-intro">
+    Una presenza online curata o un programma pensato per il tuo modo
+    di lavorare: scegliamo la soluzione in base a obiettivi e budget.
+  </p>
+  <div class="grid">
+    <article class="card">
+      <span class="step">01 / SITI WEB</span>
+      <h3>Fatti conoscere</h3>
+      <p>
+        Pagine per raccontare servizi e attività, mostrare i tuoi lavori
+        e rendere semplice contattarti, anche dal telefono.
+      </p>
+    </article>
+    <article class="card">
+      <span class="step">02 / GESTIONALI</span>
+      <h3>Organizza il lavoro</h3>
+      <p>
+        Strumenti personalizzati per clienti, richieste, appuntamenti
+        o processi interni. Funzioni e accessi vengono concordati prima.
+      </p>
+    </article>
+    <article class="card">
+      <span class="step">03 / ASSISTENZA</span>
+      <h3>Mantieni tutto in ordine</h3>
+      <p>
+        Hosting, controlli tecnici e aggiornamenti concordati.
+        Puoi scegliere un piano continuativo oppure richiedere singoli interventi.
+      </p>
+    </article>
+  </div>
+</section>
+
+<section id="prezzi">
+  <div class="label">Un punto di partenza chiaro</div>
+  <h2>Il progetto giusto per iniziare.</h2>
+  <p class="section-intro">
+    Prezzi di partenza per le configurazioni descritte.
+    Ricevi un preventivo con importo finale, trattamento IVA applicabile,
+    tempi e costi ricorrenti prima di confermare.
+  </p>
+  <div class="grid">
+    <article class="card">
+      <span class="tag">SITO ESSENZIALE</span>
+      <h3>Una pagina, tutto l’essenziale.</h3>
+      <div class="price"><small>da</small> 490 €</div>
+      <ul>
+        <li>Una pagina con massimo cinque sezioni</li>
+        <li>Layout adatto a computer e telefono</li>
+        <li>Servizi e contatti forniti dal cliente</li>
+        <li>Pulsanti email e telefono</li>
+        <li>Un giro di revisioni</li>
+      </ul>
+      <p class="note">Dominio, hosting e manutenzione esclusi.</p>
+      <a class="btn secondary"
+         href="mailto:arde.maap@gmail.com?subject=Preventivo%20sito%20essenziale">
+        Richiedi un preventivo
+      </a>
+    </article>
+
+    <article class="card highlight">
+      <span class="tag">SITO COMPLETO</span>
+      <h3>Più spazio alla tua attività.</h3>
+      <div class="price"><small>da</small> 890 €</div>
+      <ul>
+        <li>Fino a cinque pagine</li>
+        <li>Layout adatto a computer e telefono</li>
+        <li>Galleria con immagini fornite dal cliente</li>
+        <li>Impostazione di titoli e descrizioni delle pagine</li>
+        <li>Due giri di revisioni</li>
+      </ul>
+      <p class="note">
+        Dominio, hosting e manutenzione esclusi.
+        Ecommerce e prenotazioni avanzate su preventivo.
+      </p>
+      <a class="btn"
+         href="mailto:arde.maap@gmail.com?subject=Preventivo%20sito%20completo">
+        Parliamo del tuo sito
+      </a>
+    </article>
+
+    <article class="card">
+      <span class="tag">GESTIONALE PERSONALIZZATO</span>
+      <h3>Costruito sul tuo lavoro.</h3>
+      <div class="price"><small>da</small> 1.500 €</div>
+      <ul>
+        <li>Analisi iniziale delle esigenze</li>
+        <li>Piccola applicazione con perimetro concordato</li>
+        <li>Interfaccia dedicata al processo scelto</li>
+        <li>Verifica delle funzioni prima della consegna</li>
+        <li>Indicazioni per l’utilizzo</li>
+      </ul>
+      <p class="note">
+        Importo da confermare dopo l’analisi.
+        Hosting, integrazioni, migrazioni e assistenza su preventivo.
+      </p>
+      <a class="btn secondary"
+         href="mailto:arde.maap@gmail.com?subject=Richiesta%20gestionale%20personalizzato">
+        Raccontami cosa ti serve
+      </a>
+    </article>
+  </div>
+  <p class="note">
+    Testi, fotografie e materiali sono forniti dal cliente, salvo accordi diversi.
+    Il preventivo specifica anche consegna degli accessi e condizioni del progetto.
+  </p>
+</section>
+
+<section id="assistenza">
+  <div class="label">Dopo la pubblicazione</div>
+  <h2>Un riferimento anche nel tempo.</h2>
+  <p class="section-intro">
+    Piani facoltativi per siti vetrina semplici, previa verifica tecnica.
+    Le condizioni complete vengono indicate nel preventivo.
+  </p>
+  <div class="grid two">
+    <article class="card">
+      <h3>Base</h3>
+      <div class="price">29 € <small>/ mese</small></div>
+      <ul>
+        <li>Hosting per un sito vetrina, senza ecommerce</li>
+        <li>Controllo mensile di raggiungibilità e HTTPS</li>
+        <li>Copia dei file a ogni aggiornamento effettuato</li>
+        <li>Assistenza via email per segnalazioni tecniche</li>
+      </ul>
+      <p class="note">
+        Dominio, caselle email, licenze e modifiche ai contenuti esclusi.
+        Interventi correttivi quotati separatamente.
+      </p>
+      <a class="btn secondary"
+         href="mailto:arde.maap@gmail.com?subject=Informazioni%20piano%20Base">
+        Chiedi informazioni
+      </a>
+    </article>
+
+    <article class="card">
+      <h3>Cura</h3>
+      <div class="price">59 € <small>/ mese</small></div>
+      <ul>
+        <li>Tutto ciò che comprende il piano Base</li>
+        <li>30 minuti al mese di modifiche a testi e immagini</li>
+        <li>Verifica dei collegamenti durante l’intervento</li>
+        <li>Riepilogo delle modifiche effettuate</li>
+      </ul>
+      <p class="note">
+        Minuti non cumulabili. Nuove pagine, nuove funzioni
+        e interventi aggiuntivi su preventivo.
+      </p>
+      <a class="btn secondary"
+         href="mailto:arde.maap@gmail.com?subject=Informazioni%20piano%20Cura">
+        Chiedi informazioni
+      </a>
+    </article>
+  </div>
+  <p class="note">
+    Nessuna attivazione automatica da questa pagina.
+    Durata, pagamento, recesso e tempi di assistenza vengono concordati per iscritto.
+    I piani non comprendono reperibilità continua.
+  </p>
+</section>
+
+<section id="metodo">
+  <div class="label">Come lavoriamo insieme</div>
+  <h2>Dall’idea a qualcosa di concreto.</h2>
+  <div class="grid">
+    <article class="card">
+      <span class="step">01 / CI CONFRONTIAMO</span>
+      <h3>Partiamo dalle esigenze</h3>
+      <p>Mi racconti cosa fai, cosa vuoi migliorare e il budget che hai in mente.</p>
+    </article>
+    <article class="card">
+      <span class="step">02 / DEFINIAMO IL PROGETTO</span>
+      <h3>Sai cosa aspettarti</h3>
+      <p>Concordiamo funzioni, materiali, prezzo, tempi e revisioni incluse.</p>
+    </article>
+    <article class="card">
+      <span class="step">03 / REALIZZIAMO E VERIFICHIAMO</span>
+      <h3>Vediamo il risultato</h3>
+      <p>Controlliamo il progetto e, dopo l’approvazione, procediamo alla consegna.</p>
+    </article>
+  </div>
+</section>
+
+<section id="domande">
+  <div class="label">Domande frequenti</div>
+  <h2>Qualche risposta, prima di iniziare.</h2>
+  <details>
+    <summary>Devo sottoscrivere un abbonamento?</summary>
+    <p>
+      No. Puoi acquistare la realizzazione e gestire in autonomia hosting
+      e rinnovi. Accessi, file e modalità di consegna sono definiti nel preventivo.
+    </p>
+  </details>
+  <details>
+    <summary>Quanto tempo serve?</summary>
+    <p>
+      Dipende dalle funzioni richieste e dalla disponibilità dei materiali.
+      La tempistica viene indicata nel preventivo, prima dell’avvio.
+    </p>
+  </details>
+  <details>
+    <summary>Puoi modificare un sito già esistente?</summary>
+    <p>
+      Possiamo valutarlo. Inviami il link e descrivi le modifiche:
+      prima verifico tecnologia, accessi disponibili e fattibilità.
+    </p>
+  </details>
+  <details>
+    <summary>Garantisci nuovi clienti o il primo posto su Google?</summary>
+    <p>
+      No. Un sito rende più chiari servizi e contatti, ma richieste e
+      posizionamento dipendono da molti fattori e non vengono garantiti.
+    </p>
+  </details>
+</section>
+
+<section id="contatti">
+  <div class="label">Iniziamo da una conversazione</div>
+  <h2>Che cosa vuoi realizzare?</h2>
+  <div class="contact">
+    <p class="lead">
+      Raccontami la tua attività, cosa ti serve e quando vorresti partire.
+      Se hai già un sito, aggiungi il link.
+    </p>
+    <div class="actions">
+      <a class="btn"
+         href="mailto:arde.maap@gmail.com?subject=Richiesta%20preventivo%20ArdeTech&amp;body=Ciao%2C%0A%0ALa%20mia%20attivit%C3%A0%3A%20%0AMi%20serve%3A%20%0ASito%20attuale%20%28se%20presente%29%3A%20%0ATempi%20desiderati%3A%20%0ABudget%20indicativo%20%28facoltativo%29%3A%20%0A%0AGrazie">
+        Richiedi un preventivo via email →
+      </a>
+      <a class="btn secondary" href="tel:+393715638293">Chiama</a>
+    </div>
+    <p>
+      Email: <a href="mailto:arde.maap@gmail.com">arde.maap@gmail.com</a><br>
+      Telefono: <a href="tel:+393715638293">+39 371 563 8293</a>
+    </p>
+    <p class="note">
+      Il pulsante email apre il programma di posta del tuo dispositivo:
+      il messaggio verrà inviato soltanto quando lo confermerai.
+      Puoi anche copiare l’indirizzo e scrivermi dalla tua posta.
+    </p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <a class="logo" href="#inizio">Arde<span>Tech.</span></a>
+  <p>Siti web e gestionali personalizzati · Lodigiano e da remoto</p>
+  <p>Versione di lavoro: offerta e prezzi preliminari da confermare.</p>
+</footer>
+</div>
+</body>
+</html>
